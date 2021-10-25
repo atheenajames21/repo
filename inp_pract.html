@@ -1,0 +1,74 @@
+<html>
+    <body>
+        <script language ="javascript" type= "text/javascript">
+        console.log(`
+        1. to display even numbers less than 20.
+        2.To find if the entered year is a leap year or not.
+        3. To display area of rectange and area of circle`)
+
+        var ch=Number(prompt("Enter your choice"));
+        switch(ch)
+        {
+            case 1: //To display even numbers less than 20.
+            for(i=2; i<=20; i++){
+  
+  if(i % 2 == 0){
+    console.log(i);
+  }
+}
+            break;
+
+           case 2: //To find if the entered year is a leap year or not.
+           function checkLeapYear(year) {
+
+if ((0 == year % 4) && (0 != year % 100) || (0 == year % 400)) {
+    console.log(year + ' is a leap year');
+} else {
+    console.log(year + ' is not a leap year');
+}
+}
+
+const year = prompt('Enter a year:');
+
+checkLeapYear(year);
+
+            break;
+   
+
+   break;
+
+    case 3: //CLASS CALCULATOR
+    class Calculator {
+            constructor(length, width) {
+                this.length = length
+                this.width = width
+            }
+        }
+
+        class rectArea extends Calculator {
+            constructor(radius, length, width) {
+                super(length, width)
+                this.radius = radius
+            }
+            areaOfRectangle() {
+                console.log('Area of Rectangle : ' + this.length * this.width)
+            }
+        }
+
+        class circleArea extends rectArea {
+            areaOfCircle() {
+                console.log('Area of Circle : ' + 3.14 * this.radius * this.radius)
+            }
+        }
+    
+                var obj1 = new circleArea(5, 9, 7);
+                obj1.areaOfRectangle();
+                obj1.areaOfCircle();
+                break;
+
+            }
+
+      
+</script>
+    </body>
+</html>
